@@ -1,0 +1,20 @@
+{
+  "name": "lite-server-demo",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "朱聪 <zhucon@shanghai3h.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^4.1.1"
+  }
+}
