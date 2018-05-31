@@ -1,3 +1,4 @@
 node_modules
 /src/assets/big.js
 /package-lock.json
+/src/contents/.sass-cache
