@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title></title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/contents/custom.css">
+</head>
+
+<body>
+    <div id="clickme">
+        Click here
+    </div>
+    <img id="book" src="/contents/images/book.png" alt="" width="100" height="123" style="position: relative; left: 10px;">
+    <script src="./assets/jquery/jquery.js "></script>
+    <script type="text/javascript " charset="utf-8 ">
+$( "#clickme" ).click(function() {
+  $( "#book" ).animate({
+    width: "toggle",
+    height: "toggle"
+  }, {
+    duration: 5000,
+    specialEasing: {
+      width: "linear",
+      height: "easeOutBounce"
+    },
+    complete: function() {
+      $( this ).after( "<div>Animation complete.</div>" );
+    }
+  });
+});
+    </script>
+</body>
+
+</html>
