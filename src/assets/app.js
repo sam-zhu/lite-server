@@ -30,4 +30,4 @@ console.log(a + 'begin');
             document.body.appendChild(script);
     };
 
-	getJS('scripts/big.js');
+	getJS('assets/big.js');
