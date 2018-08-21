@@ -13,6 +13,39 @@
   <input id ='btn' value="sa"/>
 </body>
 <script>
+
+	var processor ={
+		timeoutId: null,
+		performProcessing: function(){
+
+		},
+		process: function(){
+			clearTimeout(this.timeoutId);
+			var that = this;
+			this.timeoutId = setTimeout(function(){
+				that.performProcessing();
+			}, 100);
+		}
+	};
+	//processor.process();
+
+	function throttle(method, context){
+		clearTimeout(method.tId);
+		method.tId = setTimeout(function(){
+			method.call(context);
+		}, 100);
+	}
+	var num =0;
+	function m1(){
+		console.log('m1:' + num);
+	}
+
+
+	for (var i = 2; i >= 0; i--) {
+		num++;
+		throttle(m1, num);
+	}
+
 	console.log('end.')
 </script>
 </html>
